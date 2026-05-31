@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💊 약-up!"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Medication Adherence Tracker"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- ⚠️ PENDING VERIFICATION BANNER -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/verificationBanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFF3E0"
+        app:layout_constraintTop_toBottomOf="@id/subtitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Verification Required"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#E65100" />
+
+            <TextView
+                android:id="@+id/verificationBannerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="13sp"
+                android:textColor="#BF360C"
+                android:layout_marginTop="4dp" />
+
+            <Button
+                android:id="@+id/verifyNowButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="📷 Verify Pill Now"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#FF6F00" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Main Buttons -->
+    <Button
+        android:id="@+id/addMedicationButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="➕  Register Medication"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/verificationBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="🔍  Verify My Pill"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/addMedicationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/medicationListButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="💊  My Medications"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/verifyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/statisticsButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="📊  View Statistics"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/medicationListButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- TEST BUTTON - remove before final submission -->
+    <Button
+        android:id="@+id/testAlarmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🧪 Test Alarm (10 sec)"
+        android:textSize="12sp"
+        android:backgroundTint="#9E9E9E"
+        app:layout_constraintTop_toBottomOf="@id/statisticsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
